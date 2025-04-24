@@ -1,0 +1,35 @@
+# Vaultify
+
+Vaultify ist ein leichtgewichtiges C++-Tool zum sicheren Ver- und Entschlüsseln von Dateien. Es verwendet AES-256-GCM (AEAD) und lässt den Schlüssel aus einer Passphrase per PBKDF2 ableiten.
+
+---
+
+## Features
+
+- **AEAD-Verschlüsselung**: AES-256-GCM für Vertraulichkeit und Integrität
+- **Passwort-Modus**: Key-Derivation mit PBKDF2-HMAC-SHA256 (100 000 Iterationen, 16 Byte Salt)
+- **Datei-agnostisch**: Verschlüsselt beliebige Dateitypen (Binär, Text, Archive, Medien…)
+
+---
+
+## Installation
+
+1. **Voraussetzungen**
+   - C++17-kompatibler Compiler
+   - CMake ≥ 3.10
+   - OpenSSL
+
+2. **Klonen**
+   ```bash
+   git clone https://github.com/heyitsrey/vaultify.git
+
+---
+
+## Verwendung
+
+Eine Beispieldatei ist unter examples/myText.txt zu finden
+
+Angegebene Schritte befolgen
+1. Operation wählen und in Konsole eingeben (1. Encrypt, 2. Decrypt)
+2. Dateipfad angeben (Bei Encrypt->zu verschlüsselnde Datei, bei Decrypt->verschlüsselte Datei)
+3. Passworteingabe
